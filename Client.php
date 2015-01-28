@@ -85,5 +85,10 @@ class Client extends GuzzleClient
         if ('api.embed.ly' === $event->getRequest()->getHost()) {
             $event->getRequest()->getQuery()->set('key', $this->apiKey);
         }
+
+        $path = $event->getRequest()->getPath();
+        if ('/1/display' === substr($path, 0, 10)) {
+            $event->getRequest()->setHost('i.embed.ly');
+        }
     }
 }
