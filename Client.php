@@ -12,6 +12,9 @@ use GuzzleHttp\Event\BeforeEvent;
  * Embed.ly API client.
  *
  * @author Emanuele Minotto <minottoemanuele@gmail.com>
+ *
+ * @method array extract(array $params)
+ * @method array oembed(array $params)
  */
 class Client extends GuzzleClient
 {
@@ -85,10 +88,35 @@ class Client extends GuzzleClient
         if ('api.embed.ly' === $event->getRequest()->getHost()) {
             $event->getRequest()->getQuery()->set('key', $this->apiKey);
         }
+    }
 
-        $path = $event->getRequest()->getPath();
-        if ('/1/display' === substr($path, 0, 10)) {
-            $event->getRequest()->setHost('i.embed.ly');
+    /**
+     * The display based routes.
+     * 
+     * @param string $method Display method, can be crop, resize, fill or empty.
+     * @param array  $params Request options.
+     *
+     * @link http://embed.ly/docs/api/display/endpoints/1/display
+     * @link http://embed.ly/docs/api/display/endpoints/1/display/crop
+     * @link http://embed.ly/docs/api/display/endpoints/1/display/fill
+     * @link http://embed.ly/docs/api/display/endpoints/1/display/resize
+     * 
+     * @return string
+     */
+    public function display($method = null, array $params = array())
+    {
+        $httpClient = $this->getHttpClient();
+
+        if (!is_null($method)) {
+            $method = '/' . $method;
         }
+
+        $params['key'] = $this->getApiKey();
+
+        $response = $httpClient->get('http://i.embed.ly/1/display' . $method, [
+            'query' => $params,
+        ]);
+
+        return (string) $response->getBody();
     }
 }

@@ -6,7 +6,9 @@
         </testsuite>
     </testsuites>
     <php>
-        <const name="API_KEY" value="" />
+        <env name="api_key" value=""/>
+        <env name="picture_url" value="http://placehold.it/500"/>
+        <env name="url" value="http://embed.ly/"/>
     </php>
     <filter>
         <whitelist>
