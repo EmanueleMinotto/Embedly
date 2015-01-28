@@ -11,6 +11,11 @@
         }
     },
     "description": "Library for embed.ly APIs",
+    "keywords": [
+        "embed",
+        "embedly",
+        "oembed"
+    ],
     "license": "MIT",
     "name": "emanueleminotto/embedly",
     "require": {
