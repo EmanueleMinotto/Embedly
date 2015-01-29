@@ -3,6 +3,16 @@ Embedly [![Build Status](https://travis-ci.org/EmanueleMinotto/Embedly.svg)](htt
 
 Library for [embed.ly APIs](http://embed.ly/api) based on [Guzzle 5](http://docs.guzzlephp.org/en/latest/).
 
+## Install
+
+Install the Embedly library adding `emanueleminotto/embedly` to your composer.json or from CLI:
+
+```
+$ composer require emanueleminotto/embedly
+```
+
+Read more about the [Composer](http://getcomposer.org/) installation here: [getcomposer.org/doc/00-intro.md](https://getcomposer.org/doc/00-intro.md)
+
 ## Usage
 
 This library provides 3 API: [embed.ly/docs/api](http://embed.ly/docs/api).
