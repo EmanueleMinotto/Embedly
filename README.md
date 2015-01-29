@@ -46,7 +46,7 @@ $extracted = $client->extract([
 
 ### Display
 
-The first argument can be `NULL`, `crop`, `resize` or `fill`.
+The first argument can be *NULL*, `crop`, `resize` or `fill`.
 
 Options are available at
 
