@@ -33,8 +33,8 @@ class Client extends GuzzleClient
     /**
      * Class constructor.
      *
-     * @param string|null                      $apiKey API key (optional).
-     * @param \GuzzleHttp\ClientInterface|null $client Alternative Guzzle HTTP client (optional).
+     * @param string|null                      $apiKey     API key (optional).
+     * @param \GuzzleHttp\ClientInterface|null $httpClient Alternative Guzzle HTTP client (optional).
      */
     public function __construct($apiKey = null, GuzzleHttp_ClientInterface $httpClient = null)
     {
@@ -92,7 +92,7 @@ class Client extends GuzzleClient
 
     /**
      * The display based routes.
-     * 
+     *
      * @param string $method Display method, can be crop, resize, fill or empty.
      * @param array  $params Request options.
      *
@@ -100,7 +100,7 @@ class Client extends GuzzleClient
      * @link http://embed.ly/docs/api/display/endpoints/1/display/crop
      * @link http://embed.ly/docs/api/display/endpoints/1/display/fill
      * @link http://embed.ly/docs/api/display/endpoints/1/display/resize
-     * 
+     *
      * @return string
      */
     public function display($method = null, array $params = array())
@@ -108,12 +108,12 @@ class Client extends GuzzleClient
         $httpClient = $this->getHttpClient();
 
         if (!is_null($method)) {
-            $method = '/' . $method;
+            $method = '/'.$method;
         }
 
         $params['key'] = $this->getApiKey();
 
-        $response = $httpClient->get('http://i.embed.ly/1/display' . $method, [
+        $response = $httpClient->get('http://i.embed.ly/1/display'.$method, [
             'query' => $params,
         ]);
 
