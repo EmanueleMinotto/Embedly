@@ -85,8 +85,15 @@ class Client extends GuzzleClient
      */
     private function getBeforeEvent(BeforeEvent $event)
     {
-        if ('api.embed.ly' === $event->getRequest()->getHost()) {
-            $event->getRequest()->getQuery()->set('key', $this->apiKey);
+        $request = $event->getRequest();
+
+        if ('api.embed.ly' === $request->getHost()) {
+            $requestQuery = $request->getQuery();
+
+            $requestQuery->setEncodingType(false);
+            $requestQuery->set('key', $this->apiKey);
+
+            $request->setQuery($requestQuery);
         }
     }
 
@@ -118,5 +125,17 @@ class Client extends GuzzleClient
         ]);
 
         return (string) $response->getBody();
+    }
+
+    /**
+     * Method used to encode URLs imploding them with a comma.
+     *
+     * @param array $values
+     *
+     * @return string
+     */
+    public static function encodeUrls(array $values)
+    {
+        return implode(',', array_map('urlencode', $values));
     }
 }

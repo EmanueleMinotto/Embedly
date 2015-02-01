@@ -78,6 +78,30 @@ class ClientTest extends PHPUnit_Framework_TestCase
     }
 
     /**
+     * @covers ::oembed
+     */
+    public function testOembedMultiple()
+    {
+        $client = new Client($_ENV['api_key']);
+        $embeds = $client->oembed([
+            'urls' => [
+                $_ENV['url'],
+                'http://www.example.com/',
+            ],
+        ]);
+
+        $this->assertInternalType('array', $embeds);
+        $this->assertCount(2, $embeds);
+
+        foreach ($embeds as $embed) {
+            $this->assertInternalType('array', $embed);
+
+            $this->assertArrayHasKey('type', $embed);
+            $this->assertContains($embed['type'], ['photo', 'video', 'rich', 'link', 'error']);
+        }
+    }
+
+    /**
      * @covers ::extract
      */
     public function testExtract()

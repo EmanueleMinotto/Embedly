@@ -68,8 +68,20 @@
                 "url": {
                     "description": "The URL is to retrieve embedding information.",
                     "location": "query",
-                    "required": true,
                     "type": "string"
+                },
+                "urls": {
+                    "description": "A comma separated list of urls for Embedly to process.",
+                    "filters": [
+                        {
+                            "args": [
+                                "@value"
+                            ],
+                            "method": "EmanueleMinotto\\Embedly\\Client::encodeUrls"
+                        }
+                    ],
+                    "location": "query",
+                    "type": "array"
                 },
                 "videosrc": {
                     "description": "Either true Embedly will use the video_src meta or Open Graph tag to create a video object to embed.",
@@ -147,8 +159,20 @@
                 "url": {
                     "description": "The URL is to retrieve embedding information.",
                     "location": "query",
-                    "required": true,
                     "type": "string"
+                },
+                "urls": {
+                    "description": "A comma separated list of urls for Embedly to process.",
+                    "filters": [
+                        {
+                            "args": [
+                                "@value"
+                            ],
+                            "method": "EmanueleMinotto\\Embedly\\Client::encodeUrls"
+                        }
+                    ],
+                    "location": "query",
+                    "type": "array"
                 },
                 "videosrc": {
                     "description": "Either true Embedly will use the video_src meta or Open Graph tag to create a video object to embed.",

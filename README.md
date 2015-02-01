@@ -26,8 +26,6 @@ Options are available at http://embed.ly/docs/api/embed/arguments
 
 For this method the `$api_key` can be null.
 
-Currently the `url` attribute is required.
-
 ```php
 use EmanueleMinotto\Embedly\Client;
 
@@ -36,13 +34,20 @@ $client = new Client($api_key);
 $embed = $client->oembed([
     'url' => 'http://www.example.com/',
 ]);
+
+// enumerated array containing
+// arrays like $embed
+$embeds = $client->oembed([
+    'urls' => [
+        'http://www.example.com/',
+        'http://www.google.com/'
+    ]
+]);
 ```
 
 ### Extract
 
 Options are available at http://embed.ly/docs/api/embed/arguments
-
-Currently the `url` attribute is required.
 
 ```php
 use EmanueleMinotto\Embedly\Client;
@@ -51,6 +56,15 @@ $client = new Client($api_key);
 
 $extracted = $client->extract([
     'url' => 'http://www.example.com/',
+]);
+
+// enumerated array containing
+// arrays like $extracted
+$extracteds = $client->oembed([
+    'urls' => [
+        'http://www.example.com/',
+        'http://www.google.com/'
+    ]
 ]);
 ```
 
