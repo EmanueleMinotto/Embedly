@@ -93,3 +93,13 @@ $content = $client->display('resize', [
     'width' => 150,
 ]);
 ```
+
+## Twig Extension
+
+In this library there's included a [Twig](http://twig.sensiolabs.org/) extension to allow a simple integration with frameworks.
+
+Functions prefix is: `embedly_`, arguments are the same of the methods above.
+
+```twig
+{{ embedly_oembed({url: 'http://www.example.com'}).title }} {# Example Domain #}
+```
