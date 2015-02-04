@@ -1,0 +1,12 @@
+--TEST--
+wrong "embedly_oembed" function
+--TEMPLATE--
+{{ embedly_oembed({
+    url: url
+}).title }}
+--DATA--
+return array(
+    'url' => 'example',
+)
+--EXPECT--
+Twig_Error: Twig_Error_Runtime: An exception has been thrown during the rendering of a template ("Error executing command: Client error response [url] http://api.embed.ly/1/oembed?url=example&key= [status code] 400 [reason phrase] Bad Request") in "index.twig" at line 3 in "functions/wrong_embedly_oembed.test".

@@ -1,0 +1,12 @@
+--TEST--
+"embedly_oembed" function
+--TEMPLATE--
+{{ embedly_oembed({
+    url: url
+}).title }}
+--DATA--
+return array(
+    'url' => 'http://www.example.com/',
+)
+--EXPECT--
+Example Domain
