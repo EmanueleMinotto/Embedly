@@ -54,26 +54,23 @@ class ClientTest extends PHPUnit_Framework_TestCase
         $this->assertContains($embed['type'], ['photo', 'video', 'rich', 'link', 'error']);
 
         switch ($embed['type']) {
-            case 'error': {
+            case 'error':
                 $this->assertArrayHasKey('error_code', $embed);
                 $this->assertArrayHasKey('error_message', $embed);
                 $this->assertArrayHasKey('url', $embed);
 
                 break;
-            }
-            case 'photo': {
+            case 'photo':
                 $this->assertArrayHasKey('height', $embed);
                 $this->assertArrayHasKey('url', $embed);
                 $this->assertArrayHasKey('width', $embed);
 
                 break;
-            }
             case 'rich':
-            case 'video': {
+            case 'video':
                 $this->assertArrayHasKey('html', $embed);
 
                 break;
-            }
         }
     }
 
@@ -151,21 +148,19 @@ class ClientTest extends PHPUnit_Framework_TestCase
         }
 
         switch ($extracted['type']) {
-            case 'photo': {
+            case 'photo':
                 $this->assertArrayHasKey('height', $extracted);
                 $this->assertArrayHasKey('url', $extracted);
                 $this->assertArrayHasKey('width', $extracted);
 
                 break;
-            }
             case 'rich':
-            case 'video': {
+            case 'video':
                 $this->assertArrayHasKey('height', $extracted);
                 $this->assertArrayHasKey('html', $extracted);
                 $this->assertArrayHasKey('width', $extracted);
 
                 break;
-            }
         }
     }
 
