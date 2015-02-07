@@ -25,6 +25,7 @@ class ClientTest extends PHPUnit_Framework_TestCase
     }
 
     /**
+     * @covers ::getApiKey
      * @covers ::setApiKey
      */
     public function testApiKeySet()
