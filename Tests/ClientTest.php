@@ -195,7 +195,7 @@ class ClientTest extends PHPUnit_Framework_TestCase
                 'color' => '000',
                 'height' => 50,
                 'width' => 50,
-            ]],
+            ]]
         ];
     }
 }
