@@ -1,4 +1,4 @@
-Embedly [![Build Status](https://travis-ci.org/EmanueleMinotto/Embedly.svg)](https://travis-ci.org/EmanueleMinotto/Embedly)
+Embedly [![Build Status](https://travis-ci.org/EmanueleMinotto/Embedly.svg)](https://travis-ci.org/EmanueleMinotto/Embedly) [![Coverage Status](https://coveralls.io/repos/EmanueleMinotto/Embedly/badge.svg)](https://coveralls.io/r/EmanueleMinotto/Embedly)
 -------
 
 Library for [embed.ly APIs](http://embed.ly/api) based on [Guzzle 5](http://docs.guzzlephp.org/en/latest/).
