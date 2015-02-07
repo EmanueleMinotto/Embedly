@@ -37,10 +37,6 @@ class ClientTest extends PHPUnit_Framework_TestCase
         $this->assertSame($key, $client->getApiKey());
     }
 
-    /**
-     * @covers ::oembed
-     * @link http://oembed.com/
-     */
     public function testOembed()
     {
         $client = new Client($_ENV['api_key']);
@@ -74,9 +70,6 @@ class ClientTest extends PHPUnit_Framework_TestCase
         }
     }
 
-    /**
-     * @covers ::oembed
-     */
     public function testOembedMultiple()
     {
         $client = new Client($_ENV['api_key']);
@@ -98,9 +91,6 @@ class ClientTest extends PHPUnit_Framework_TestCase
         }
     }
 
-    /**
-     * @covers ::extract
-     */
     public function testExtract()
     {
         if (!$_ENV['api_key']) {
