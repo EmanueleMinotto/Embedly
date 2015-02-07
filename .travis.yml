@@ -8,6 +8,10 @@ php:
 
 before_script:
 - composer install
+- composer require satooshi/php-coveralls:~0.6 --dev
+
+after_script:
+  - php vendor/bin/coveralls
 
 notifications:
   email: false
