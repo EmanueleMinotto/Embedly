@@ -81,6 +81,8 @@ class Client extends GuzzleClient
     /**
      * Guzzle event used to set the key parameter.
      *
+     * @codeCoverageIgnore
+     *
      * @param BeforeEvent $event
      */
     private function getBeforeEvent(BeforeEvent $event)

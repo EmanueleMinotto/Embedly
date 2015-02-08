@@ -38,6 +38,9 @@ class ClientTest extends PHPUnit_Framework_TestCase
         $this->assertSame($key, $client->getApiKey());
     }
 
+    /**
+     * @coversNothing
+     */
     public function testOembed()
     {
         $client = new Client($_ENV['api_key']);
@@ -71,6 +74,9 @@ class ClientTest extends PHPUnit_Framework_TestCase
         }
     }
 
+    /**
+     * @coversNothing
+     */
     public function testOembedMultiple()
     {
         $client = new Client($_ENV['api_key']);
@@ -92,6 +98,9 @@ class ClientTest extends PHPUnit_Framework_TestCase
         }
     }
 
+    /**
+     * @coversNothing
+     */
     public function testExtract()
     {
         if (!$_ENV['api_key']) {
@@ -173,6 +182,11 @@ class ClientTest extends PHPUnit_Framework_TestCase
         $this->assertInternalType('string', $displayed);
     }
 
+    /**
+     * Data Provider for the display method.
+     *
+     * @return array
+     */
     public function displayDataProvider()
     {
         return [
@@ -188,5 +202,18 @@ class ClientTest extends PHPUnit_Framework_TestCase
                 'width' => 50,
             ]],
         ];
+    }
+
+    /**
+     * @covers ::encodeUrls
+     */
+    public function testEncodeUrls()
+    {
+        $urls = Client::encodeUrls([
+            'http://www.example.com/',
+            'http://www.google.com/',
+        ]);
+
+        $this->assertSame('http%3A%2F%2Fwww.example.com%2F,http%3A%2F%2Fwww.google.com%2F', $urls);
     }
 }
