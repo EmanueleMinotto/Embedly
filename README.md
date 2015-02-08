@@ -1,5 +1,5 @@
 Embedly
--------
+=======
 
 [![Build Status](https://img.shields.io/travis/EmanueleMinotto/Embedly.svg?style=flat)](https://travis-ci.org/EmanueleMinotto/Embedly)
 [![SensioLabs Insight](https://img.shields.io/sensiolabs/i/6d6207e1-5347-40ec-98d9-2d75cda2ca7d.svg?style=flat)](https://insight.sensiolabs.com/projects/6d6207e1-5347-40ec-98d9-2d75cda2ca7d)
