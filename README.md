@@ -1,4 +1,4 @@
-Embedly [![Build Status](https://travis-ci.org/EmanueleMinotto/Embedly.svg)](https://travis-ci.org/EmanueleMinotto/Embedly) [![Coverage Status](https://coveralls.io/repos/EmanueleMinotto/Embedly/badge.svg?branch=master)](https://coveralls.io/r/EmanueleMinotto/Embedly?branch=master)
+Embedly [![Build Status](https://img.shields.io/travis/EmanueleMinotto/Embedly.svg)](https://travis-ci.org/EmanueleMinotto/Embedly) [![SensioLabs Insight](https://img.shields.io/sensiolabs/i/6d6207e1-5347-40ec-98d9-2d75cda2ca7d.svg?style=flat)](https://insight.sensiolabs.com/projects/6d6207e1-5347-40ec-98d9-2d75cda2ca7d) [![Coverage Status](https://img.shields.io/coveralls/EmanueleMinotto/Embedly.svg)](https://coveralls.io/r/EmanueleMinotto/Embedly) [![Total Downloads](https://img.shields.io/packagist/dt/EmanueleMinotto/Embedly.svg?style=flat)](https://packagist.org/packages/emanueleminotto/embedly)
 -------
 
 Library for [embed.ly APIs](http://embed.ly/api) based on [Guzzle 5](http://docs.guzzlephp.org/en/latest/).
