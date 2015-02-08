@@ -33,9 +33,10 @@ class ClientTest extends PHPUnit_Framework_TestCase
         $key = 'test';
 
         $client = new Client();
-        $client->setApiKey($key);
+        $tmp = $client->setApiKey($key);
 
         $this->assertSame($key, $client->getApiKey());
+        $this->assertInstanceOf(get_class($client), $tmp);
     }
 
     /**
