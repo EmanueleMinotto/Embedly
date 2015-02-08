@@ -11,7 +11,6 @@ env:
     secure: c9/Xn6nvja4+HYy4cLzZxUcsQoDh3tkqqiE7Ztb0yjNyeJE91eEmCp66HHlW3Xd58Qzct9/WeuD6mAYs5s6a+QPyyz15hn5vRVVFzhzIDsaLdcBoz+o/x2MWiIUjEC+lS5PlVUffdw7/bm63J6/wJOTzcCr5fyBXrmJVLe6ArEk=
 
 before_script:
-- composer install
 - composer require satooshi/php-coveralls:~0.6 --dev
 
 script:
