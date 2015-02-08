@@ -6,7 +6,6 @@ Embedly
 [![Coverage Status](https://img.shields.io/coveralls/EmanueleMinotto/Embedly.svg)](https://coveralls.io/r/EmanueleMinotto/Embedly)
 [![Code Quality](https://img.shields.io/scrutinizer/g/filp/whoops.svg)](https://scrutinizer-ci.com/g/EmanueleMinotto/Embedly/)
 [![Total Downloads](https://img.shields.io/packagist/dt/EmanueleMinotto/Embedly.svg?style=flat)](https://packagist.org/packages/emanueleminotto/embedly)
-[![Reference Status](https://www.versioneye.com/php/emanueleminotto:embedly/reference_badge.svg?style=flat)](https://www.versioneye.com/php/emanueleminotto:embedly/references)
 
 Library for [embed.ly APIs](http://embed.ly/api) based on [Guzzle 5](http://docs.guzzlephp.org/en/latest/).
 
