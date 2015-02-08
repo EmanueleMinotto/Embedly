@@ -116,7 +116,9 @@ class Client extends GuzzleClient
     {
         $httpClient = $this->getHttpClient();
 
-        $method = '/'.ltrim($method, '/');
+        if (trim($method)) {
+            $method = '/'.ltrim($method, '/');
+        }
 
         $params['key'] = $this->getApiKey();
 
