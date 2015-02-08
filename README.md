@@ -5,7 +5,6 @@ Embedly
 [![SensioLabs Insight](https://img.shields.io/sensiolabs/i/6d6207e1-5347-40ec-98d9-2d75cda2ca7d.svg?style=flat)](https://insight.sensiolabs.com/projects/6d6207e1-5347-40ec-98d9-2d75cda2ca7d)
 [![Coverage Status](https://img.shields.io/coveralls/EmanueleMinotto/Embedly.svg)](https://coveralls.io/r/EmanueleMinotto/Embedly)
 [![Code Quality](https://img.shields.io/scrutinizer/g/filp/whoops.svg)](https://scrutinizer-ci.com/g/EmanueleMinotto/Embedly/)
-[![GitHub release](https://img.shields.io/github/release/qubyte/rubidium.svg)](https://github.com/EmanueleMinotto/Embedly/releases)
 [![Total Downloads](https://img.shields.io/packagist/dt/EmanueleMinotto/Embedly.svg?style=flat)](https://packagist.org/packages/emanueleminotto/embedly)
 [![Reference Status](https://www.versioneye.com/php/emanueleminotto:embedly/reference_badge.svg?style=flat)](https://www.versioneye.com/php/emanueleminotto:embedly/references)
 
