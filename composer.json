@@ -1,15 +1,5 @@
 {
-    "authors": [
-        {
-            "email": "minottoemanuele@gmail.com",
-            "name": "Emanuele Minotto"
-        }
-    ],
-    "autoload": {
-        "psr-4": {
-            "EmanueleMinotto\\Embedly\\": "."
-        }
-    },
+    "name": "emanueleminotto/embedly",
     "description": "Library for embed.ly APIs",
     "keywords": [
         "embed",
@@ -17,7 +7,13 @@
         "oembed"
     ],
     "license": "MIT",
-    "name": "emanueleminotto/embedly",
+    "authors": [
+        {
+            "name": "Emanuele Minotto",
+            "email": "minottoemanuele@gmail.com",
+            "homepage": "http://www.emanueleminotto.it"
+        }
+    ],
     "require": {
         "guzzlehttp/guzzle": "~5.2",
         "guzzlehttp/guzzle-services": "0.5.*"
@@ -28,5 +24,10 @@
     },
     "suggest": {
         "twig/twig": "allows Twig extension integration"
+    },
+    "autoload": {
+        "psr-4": {
+            "EmanueleMinotto\\Embedly\\": "."
+        }
     }
 }
