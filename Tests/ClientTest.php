@@ -169,7 +169,7 @@ class ClientTest extends PHPUnit_Framework_TestCase
      * @covers ::display
      * @dataProvider displayDataProvider
      */
-    public function testDisplay($method, array $options = array())
+    public function testDisplay($method, array $options = [])
     {
         if (!$_ENV['api_key']) {
             $this->markTestSkipped('API key is required.');
@@ -194,13 +194,13 @@ class ClientTest extends PHPUnit_Framework_TestCase
             [null, []],
             ['crop', [
                 'height' => 50,
-                'width' => 50,
+                'width'  => 50,
             ]],
             ['resize', []],
             ['fill', [
-                'color' => '000',
+                'color'  => '000',
                 'height' => 50,
-                'width' => 50,
+                'width'  => 50,
             ]],
         ];
     }

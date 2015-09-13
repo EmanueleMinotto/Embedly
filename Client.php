@@ -112,7 +112,7 @@ class Client extends GuzzleClient
      *
      * @return string
      */
-    public function display($method = null, array $params = array())
+    public function display($method = null, array $params = [])
     {
         $httpClient = $this->getHttpClient();
 

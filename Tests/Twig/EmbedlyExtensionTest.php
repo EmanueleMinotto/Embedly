@@ -17,9 +17,9 @@ class EmbedlyExtensionTest extends Twig_Test_IntegrationTestCase
      */
     public function getExtensions()
     {
-        return array(
+        return [
             new EmbedlyExtension(),
-        );
+        ];
     }
 
     /**

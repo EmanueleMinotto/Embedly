@@ -36,9 +36,9 @@ class EmbedlyExtension extends Twig_Extension
     public function getFunctions()
     {
         return [
-            new Twig_SimpleFunction('embedly_display', array($this->client, 'display')),
-            new Twig_SimpleFunction('embedly_extract', array($this->client, 'extract')),
-            new Twig_SimpleFunction('embedly_oembed', array($this->client, 'oembed')),
+            new Twig_SimpleFunction('embedly_display', [$this->client, 'display']),
+            new Twig_SimpleFunction('embedly_extract', [$this->client, 'extract']),
+            new Twig_SimpleFunction('embedly_oembed', [$this->client, 'oembed']),
         ];
     }
 
